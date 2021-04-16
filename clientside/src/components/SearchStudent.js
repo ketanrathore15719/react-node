@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Table} from 'react-bootstrap'
 
 class SearchStudent extends Component {
+
 	constructor() 
 	{
 		super()
@@ -25,7 +26,8 @@ class SearchStudent extends Component {
 			})
 		})
 	}
-	render() {
+	render() 
+	{
 		return (
 			<div>
 				<br/>
@@ -38,33 +40,33 @@ class SearchStudent extends Component {
 					{
 						this.state.searchData?
 						<div>
-                        <Table className="Table">
-                        <thead>
-                        <tr>
-                            <th>##</th>
-                            <th>Roll Number</th>
-                            <th>Name</th>
-                            <th>Class</th>
-                            <th>DOB</th>
-                            <th>Mobile</th>
-                            <th>City</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-						{
-							this.state.searchData.map((val, i)=>
-							<tr>
-                                <td>{i}</td>
-                                <td>{val.roll_number}</td>
-                                <td>{val.name}</td>
-                                <td>{val.class}</td>
-                                <td>{val.dob}</td>
-                                <td>{val.mobile}</td>
-                                <td>{val.city}</td>
-                            </tr>)
-						}
-						</tbody>
-                        </Table>
+							<Table className="Table">
+								<thead>
+									<tr>
+										<th>##</th>
+										<th>Roll Number</th>
+										<th>Name</th>
+										<th>Class</th>
+										<th>DOB</th>
+										<th>Mobile</th>
+										<th>City</th>
+									</tr>
+								</thead>
+								<tbody>
+									{
+										this.state.searchData.map((val, i)=>
+										<tr>
+											<td>{i}</td>
+											<td>{val.roll_number}</td>
+											<td>{val.name}</td>
+											<td>{val.class}</td>
+											<td>{val.dob}</td>
+											<td>{val.mobile}</td>
+											<td>{val.city}</td>
+										</tr>)
+									}
+								</tbody>
+							</Table>
 						</div>
 						:<p></p>
 					}
